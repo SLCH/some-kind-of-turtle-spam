@@ -1,0 +1,16 @@
+{
+    "users": [
+        {
+            "username": "memer1",
+            "token": "token without oauth:"
+        },
+        {
+            "username": "memer2",
+            "token": "xd",
+            "selected": true
+        }
+    ],
+    "memeStuff": {
+        "channel": "slch000"
+    }
+}
