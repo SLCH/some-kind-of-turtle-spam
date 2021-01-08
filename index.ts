@@ -2,7 +2,7 @@ import chalk from "chalk";
 import { ChatClient } from "dank-twitch-irc";
 
 import config from './config.json';
-import utils from "./src/utils";
+import * as utils from "./src/utils/logging";
 import initGlobals from './src/initGlobals';
 import { MemeTarget } from "./src/memeTarget";
 
@@ -66,8 +66,8 @@ async function doTheThing() {
         return;
     }
     const memes = new MemeTarget(globalThis.my.memeStuff.channel, client);
-    await memes.sayHi(3);
-    // await memes.turtlerush('everyone');
+    memes.pyramid('dankCrayon', 5);
+    await memes.executeAs('mod');
     await memes.destroy();
     client.close();
     process.exit(0);
